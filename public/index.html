@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线表单收集系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>在线表单收集系统</h1>
+        <form id="dataForm">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name" required pattern="^[\u4e00-\u9fa5]{2,4}$" title="请输入2到4个汉字">
+            
+            <label for="phone">电话：</label>
+            <input type="tel" id="phone" name="phone" required pattern="^\d{11}$" title="请输入11位数字的电话号码">
+            
+            <label for="organization">单位：</label>
+            <select id="organization" name="organization" required>
+                <option value="客运公司">客运公司</option>
+                <option value="客服公司">客服公司</option>
+                <option value="潍城交运">潍城交运</option>
+                <option value="汽车总站">汽车总站</option>
+            </select>
+            
+            <label for="carPlate">包车牌号：</label>
+            <input type="text" id="carPlate" name="carPlate" required pattern="^[\u4e00-\u9fa5]{1}[A-Z]{1}[\dA-Z]{5}$" title="请输入正确的车牌号格式">
+            
+            <label for="signature">手写签名：</label>
+            <canvas id="signature-pad" width="300" height="150"></canvas>
+            <button type="button" id="clear">清除签名</button>
+            
+            <button type="submit">提交</button>
+        </form>
+    </div>
+    <script src="signature.js"></script>
+</body>
+</html>

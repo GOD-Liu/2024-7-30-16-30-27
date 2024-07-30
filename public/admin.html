@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>后台管理页面</h1>
+        <div class="filter-container">
+            <label for="filterDate">筛选日期：</label>
+            <input type="date" id="filterDate">
+            <label for="filterOrganization">筛选单位：</label>
+            <select id="filterOrganization">
+                <option value="">全部</option>
+                <option value="客运公司">客运公司</option>
+                <option value="客服公司">客服公司</option>
+                <option value="潍城交运">潍城交运</option>
+                <option value="汽车总站">汽车总站</option>
+            </select>
+            <button id="applyFilter">应用筛选</button>
+        </div>
+        <table id="submissionsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>姓名</th>
+                    <th>电话</th>
+                    <th>单位</th>
+                    <th>包车牌号</th>
+                    <th>手写签名</th>
+                    <th>提交时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button id="download">下载数据</button>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
